@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch | Arimardan </title>
+
+    <!-- links for the google fonts -->
+    <!-- Used Roboto as my only font-family for this project -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- connecting css file to the html -->
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+
+    <!-- created a section (main__section) which will contain all the html components -->
+    <section id="main__section">
+        <!-- division for storing the logo image -->
+        <div id="ls__fc__logo">
+            <div id="logo__image">
+                <img src="assets/los_angeles_fc_logo.png" />
+            </div>
+        </div>
+
+        <!-- division for storing the quote text -->
+        <div id="quote">
+            <div id="quote__text">
+                <p>The man who says he can and the man who says he cannot... are both correct.
+                </p>
+            </div>
+        </div>
+
+        <!-- division for storing the stopwatch timer components -->
+        <div id="timer__container">
+            <div id="timer__container__grid">
+
+                <!-- division for storing the hours information -->
+                <div id="hours__div" class="timer__grid__item">
+                    <!-- division for storing the no of hours -->
+                    <div id="no__of__hours" class="numeric__data">
+                        00
+                    </div>
+                    <!-- division for storing the hours in text -->
+                    <div id="hours__text" class="desc__text">
+                        HOURS
+                    </div>
+                </div>
+
+                <!-- division for storing the minutes information -->
+                <div id="minutes__div" class="timer__grid__item">
+                    <!-- division for storing the no of minutes -->
+                    <div id="no__of__minutes" class="numeric__data">
+                        00
+                    </div>
+                    <!-- division for storing the minutes in text -->
+                    <div id="minutes__text" class="desc__text">
+                        MINUTES
+                    </div>
+                </div>
+                
+                <!-- division for storing the seconds information -->
+                <div id="seconds__div" class="timer__grid__item">
+                    <!-- division for storing the no of seconds -->
+                    <div id="no__of__seconds" class="numeric__data">
+                        00
+                    </div>
+                    <!-- division for storing the seconds in text -->
+                    <div id="seconds__text" class="desc__text">
+                        SECONDS
+                    </div>
+                </div>
+
+                <!-- division for storing the milliseconds information -->
+                <div id="milliseconds__div" class="timer__grid__item">
+                    <!-- division for storing the no of milliseconds -->
+                    <div id="no__of__milliseconds" class="numeric__data">
+                        000
+                    </div>
+                    <!-- division for storing the milliseconds in text -->
+                    <div id="milliseconds__text" class="desc__text">
+                        MILLISECONDS
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- division for containing the buttons(Start, Pause and Reset) -->
+        <div id="power__buttons">
+            <div id="power__buttons__grid">
+                <!-- division for storing the Start button -->
+                <div id="start__button" class="btn start__btn">
+                    <button>Start</button>
+                </div>
+
+                <!-- division for storing the Pause button -->
+                <div id="pause__button" class="btn">
+                    <button>Pause</button>
+                </div>
+
+                <!-- division for storing the Reset Button -->
+                <div id="reset__button" class="btn">
+                    <button>Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- linking the javascript file -->
+    <script src="javascript/js.js"></script>
+</body>
+</html>
