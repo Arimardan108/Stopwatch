@@ -1,5 +1,5 @@
-# Stopwatch_CN
-Link: https://amanpatel23.github.io/Stopwatch_CN/
+# Stopwatch
+Link: 
 
 ***
 ### Functionality
@@ -9,6 +9,6 @@ Link: https://amanpatel23.github.io/Stopwatch_CN/
 
 ### Screenshots
 ##### This is how the webpage will look on larger screens
-![screenshot of the webpage](/assets/stopwatch_screenshot1.png)
+![screenshot of the webpage](/assets/)
 ##### This is how the webpage will look on smaller screens
-![screenshot of the webpage](/assets/stopwatch_screenshot2.png)
+![screenshot of the webpage](/assets/)
