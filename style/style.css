@@ -1,0 +1,209 @@
+
+/* changing some default stylings, such as setting margin and padding to zero */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* styling the body */
+body {
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/football_stadium.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* adding some more styles to the body by using pseudo selector "::after" */
+body::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121110;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* styling our main section which contains all the website components */
+#main__section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* setting size of our logo image */ 
+#logo__image img {
+    width: 80px;
+}
+
+/* styling our quote div */
+#quote {
+    margin-top: 10px;
+}
+
+/* styling the text of our quote div */
+#quote__text p {
+    color: #A5825B;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+}
+
+/* styling our timer__container div which contains all our stopwatch components */
+#timer__container {
+    width: 90%;
+    border: 1px solid #A5825B;
+    margin-top: 20px;
+}
+
+/* styling the timer__container__grid, setting its display to grid */
+#timer__container__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+    padding: 20px;
+    grid-gap: 5px !important;
+}
+
+/* styling each grid item div(hours, minutes, seconds and milliseconds div) */
+.timer__grid__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-right: 1px solid #A5825B;
+} 
+
+/* styling the numeric data of each div(hours, minutes, seconds and milliseconds) */
+.numeric__data {
+    font-size: 10rem;
+    color: #FBFBFB;
+    letter-spacing: -0.1em;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+/* styling each grid item's description text */
+.desc__text {
+    color: #B0B0B0;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* removing border from last div(millisecond) */
+.timer__grid__item:last-child {
+    border: none;
+}
+
+/* styling the buttons(Start, Pause and Reset) */
+#power__buttons {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* setting the display of buttons container as grid */
+#power__buttons__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+/* styling each button */
+.btn {
+    justify-self: center;
+}
+
+/* styling each button of the button container */
+.btn button {
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #FBFBFB;
+    padding: 10px 60px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    background: linear-gradient(#D84E62, #CA2533);
+}
+
+/* giving some extra styles to the start button of the buttons container */
+.start__btn button {
+    box-shadow: 1px 2px #A5825B;
+    font-weight: 900;
+}
+
+/* media queries */
+/* first media query (max-width: 992px) */
+@media only screen and (max-width: 992px) {
+
+    /* resizing the logo size */
+    #logo__image img {
+        width: 50px;
+    }
+
+    /* updating styles of timer container grid */
+    #timer__container__grid {
+        grid-gap: 0 !important;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+
+    /* removing border from each timer grid item */
+    .timer__grid__item {
+        border: none;
+        
+    }
+
+    /* adding background color to the 1st grid item */
+    .timer__grid__item:nth-child(1) {
+        background: #A5825B;
+    }
+
+    /* adding background color to the last(4th) grid item */
+    .timer__grid__item:nth-child(4) {
+        background: #A5825B;
+    }
+
+    /* reinitializing the the font size of numeric data */
+    .numeric__data {
+        font-size: 8rem;
+    }
+
+    /* removing the quote component, displaying it as none */
+    #quote {
+        display: none;
+    }
+
+}
+
+/* second media query (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+
+    /* reinitializing the the font size of numeric data */
+    .numeric__data {
+        font-size: 6rem;
+    }
+
+    /* updating the padding of each button from the buttons container */
+    .btn button {
+        padding: 10px 40px;
+    }
+}
